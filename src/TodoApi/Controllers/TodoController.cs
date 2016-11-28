@@ -28,7 +28,7 @@ namespace TodoApi.Controllers
         [HttpGet("{id}", Name = "GetTodo")]
         public IActionResult Get(string id)
         {
-            var item = TodoItems.Find(id);
+            var item = TodoItems.GetById(id);
             if (item == null) {
                 return NotFound();
             }
