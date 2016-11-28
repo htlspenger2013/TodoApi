@@ -12,9 +12,9 @@ namespace TodoApi.Controllers
     [Route("api/[controller]")]
     public class TodoController : Controller
     {
-        public ITodoRepository TodoItems { get; private set; }
+        public IRepository<TodoItem> TodoItems { get; private set; }
 
-        public TodoController(ITodoRepository todoItems) {
+        public TodoController(IRepository<TodoItem> todoItems) {
             TodoItems = todoItems;
         }
         // GET: api/values
